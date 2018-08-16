@@ -100,3 +100,89 @@ input[type="text"], textarea {
 input[type="text"]:focus, textarea:focus, button:focus {
   outline: 2px solid #a0bacf;
 }
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+
+
+.container-toggle {
+  width: 65%;
+  margin-bottom: 15px;
+  /* transform: translate(-50%, -50%); */
+}
+
+input.toggle {
+  position: absolute;
+  left: -9999px;
+}
+
+label.toggle {
+  display: block;
+  position: relative;
+  /* margin: 20px; */
+  padding: 15px 30px 15px 62px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #a0bacf;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .2s, box-shadow .2s;
+
+}
+
+label.toggle::after {
+  content: 'Hide Completed';
+}
+
+label.toggle::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  width: 32px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  transition: background-color .2s;
+}
+
+label.toggle:first-of-type {
+  transform: translateX(-40px);
+}
+
+label.toggle:last-of-type {
+  transform: translateX(65px);
+}
+
+label.toggle:hover, input:toggle.focus + label {
+  box-shadow: 0 0 20px rgba(0, 0, 0, .6);
+}
+input.toggle + label {
+  /* background-color: #2c3030; */
+  background-color: #435757;
+}
+input.toggle:checked + label {
+  background-color: #435757;
+}
+
+input.toggle:checked + label::before {
+  background-color: #fff;
+}
+
+input.toggle:checked + label.toggle::after {
+  content: 'Show Completed';
+}
+
+form.hide input:checked {
+
+}
+form.hide input:checked + label {
+  display:none;
+}

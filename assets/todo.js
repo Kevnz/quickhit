@@ -89,5 +89,15 @@ const setup = () => {
     input.value = "";
     listItems();
   });
+  const toggle = document.querySelector("#toggle1");
+
+  toggle.addEventListener("change", e => {
+    const f = document.querySelector("form");
+    if (toggle.checked) {
+      f.classList.add("hide");
+    } else {
+      f.classList.remove("hide");
+    }
+  });
 };
 document.addEventListener("DOMContentLoaded", setup);

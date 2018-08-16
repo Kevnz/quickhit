@@ -7,7 +7,6 @@
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pack": "electron-packager . --overwrite --platform=darwin --arch=x64  --prune=false --out=release-builds"
-
   },
   "keywords": [],
   "author": "",
@@ -17,6 +16,7 @@
   },
   "devDependencies": {
     "electron-packager": "^12.1.0",
-    "electron-prebuilt": "^1.4.13"
+    "electron-prebuilt": "^1.4.13",
+    "static-cling": "^1.0.1"
   }
 }
