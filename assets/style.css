@@ -1,0 +1,39 @@
+body {
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background: #cccccc;
+  max-width:240px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-row {
+  margin-bottom: 5px;
+}
+
+.container {
+  padding:6px;
+}
+
+.pointer {
+  width: 0;
+	height: 0;
+	border-left: 25px solid transparent;  /* left arrow slant */
+	border-right: 25px solid transparent; /* right arrow slant */
+	border-bottom: 25px solid #cccccc; /* bottom, add background color here */
+	font-size: 0;
+	line-height: 0;
+}
+.pointer-box {
+  width: 25%;
+  margin: 0 auto;
+}
