@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "electron-packager . --overwrite --platform=darwin --arch=x64  --prune=false --out=release-builds"
+    "pack": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=Icon.icns --prune=false --out=release-builds"
   },
   "keywords": [],
   "author": "",
