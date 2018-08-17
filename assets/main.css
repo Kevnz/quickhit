@@ -107,7 +107,6 @@ input[type="text"]:focus, textarea:focus, button:focus {
 
 
 .container-toggle {
-  width: 75%;
   margin-bottom: 15px;
   /* transform: translate(-50%, -50%); */
 }
@@ -150,14 +149,6 @@ label.toggle::before {
   border-radius: 100px;
   transition: background-color .2s;
   font-size: .95em;
-}
-
-label.toggle:first-of-type {
-  transform: translateX(-40px);
-}
-
-label.toggle:last-of-type {
-  transform: translateX(65px);
 }
 
 label.toggle:hover, input:toggle.focus + label {
