@@ -12,7 +12,7 @@ body {
   margin: 20px;
   color: #435757;
   background: linear-gradient(-20deg, #d0b782 20%, #a0bacf 80%);
-  font: 500 1.2em/1.2 'Roboto', sans-serif;
+  font: 200 1.1em/1.1 'Roboto', sans-serif;
 }
 
 .container {
@@ -28,7 +28,7 @@ h1 {
   margin: 0;
   padding: 20px;
   background-color: rgba(255, 255, 255, .4);
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
 }
 
