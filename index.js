@@ -10,6 +10,4 @@ mb.on("ready", function ready() {
   // your app code here
 });
 
-mb.on("after-create-window", () => {
-  mb.window.openDevTools();
-});
+mb.on("after-create-window", () => {});
