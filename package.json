@@ -5,14 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=Icon.icns --prune=false --out=release-builds"
+    "pack": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=Icon.icns --prune=false --out=release-builds",
+    "web:start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "menubar": "^5.2.3"
+    "menubar": "^5.2.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "^1.1.5"
   },
   "devDependencies": {
     "electron-packager": "^12.1.0",
