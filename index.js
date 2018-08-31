@@ -1,7 +1,8 @@
 var menubar = require("menubar");
 
 var mb = menubar({
-  transparent: true
+  transparent: true,
+  dir: "build"
 });
 
 mb.on("ready", function ready() {
@@ -10,5 +11,5 @@ mb.on("ready", function ready() {
 });
 
 mb.on("after-create-window", () => {
-  //mb.window.openDevTools();
+  mb.window.openDevTools();
 });
