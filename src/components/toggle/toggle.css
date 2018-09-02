@@ -1,0 +1,26 @@
+.container-toggle {
+  padding: 10px 5px 2px 5px;
+}
+.container-toggle a {
+  color: #435757;
+  text-decoration: none;
+}
+.container-toggle a i::after {
+  content: ' ';
+  margin-right: 5px;
+}
+.container-toggle label {
+
+}
+
+.container-toggle label:after {
+
+}
+
+.container-toggle label:hover::after {
+
+}
+
+.container-toggle input[type=checkbox]:checked + label:after {
+
+}
