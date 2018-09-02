@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import "./entry.css";
 
-import QuickHitContext from "../quickhit-context";
+import React, { Component } from "react";
 
 class EntryBase extends Component {
   constructor(props) {
@@ -15,12 +15,12 @@ class EntryBase extends Component {
     const target = event.target;
 
     if (event.key !== "Enter") return;
-
+    event.preventDefault();
     const value = target.value;
     const text = value.trim();
     if (text.length === 0 || text === "") return;
 
-    this.props.context.saveItem({
+    this.props.saveItem({
       id: Date.now(),
       text,
       isDone: false
@@ -36,16 +36,11 @@ class EntryBase extends Component {
           type="text"
           ref={this.input}
           onKeyPress={this.handleItemEntry}
+          placeholder="Add a new task"
         />
       </div>
     );
   }
 }
 
-const Entry = () => (
-  <QuickHitContext.Consumer>
-    {context => <EntryBase context={context} />}
-  </QuickHitContext.Consumer>
-);
-
-export default Entry;
+export default EntryBase;
