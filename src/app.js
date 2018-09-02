@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import Entry from "./components/entry";
-import List from "./components/list";
+import Entry from "./components/entry/";
+import List from "./components/list/";
 import QuickHitProvider from "./quickhit-provider";
-import Toggle from "./components/toggle";
+import Toggle from "./components/toggle/";
 
 class App extends Component {
   render() {
@@ -12,8 +12,9 @@ class App extends Component {
         <QuickHitProvider>
           <div className="items">
             <Toggle />
-            <List />
-            <Entry />
+            <List>
+              <Entry />
+            </List>
           </div>
         </QuickHitProvider>
       </div>
