@@ -1,0 +1,30 @@
+.items {
+  background: white;
+}
+.form-row {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+.form-row label {
+  font-size: small;
+}
+
+.form-row label:after {
+
+}
+
+.form-row label:hover::after {
+
+}
+
+.form-row input[type="checkbox"]:checked + label:after {
+
+}
+.hide .form-row input[type="checkbox"]:checked , .hide .form-row input[type="checkbox"]:checked + label{
+  display: none;
+}
+
+.hide .form-row.completed {
+  display: none;
+}
