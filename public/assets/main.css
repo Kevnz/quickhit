@@ -35,70 +35,8 @@ h1 {
 .items {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px 5px;
   counter-reset: done-items undone-items;
-}
-
-/* hide inputs offscreen, but at the same vertical positions as the correpsonding labels, so that tabbing scrolls the viewport as expected */
-input[type='checkbox'] {
-  display: block;
-  height: 53px;
-  margin: 0 0 -53px -9999px;
-  order: 4;
-  outline: none;
-}
-
-input:checked {
-  order: 2;
-}
-
-label {
-  display: block;
-  position: relative;
-  padding: 15px 0 15px 45px;
-  border-top: 1px dashed #fff;
-  order: 4;
-  cursor: pointer;
-  animation: undone .5s;
-}
-
-label::before {
-  content: '\f10c'; /* circle outline */
-  display: block;
-  position: absolute;
-  top: 11px;
-  left: 10px;
-  font: 1.5em 'FontAwesome';
-}
-
-label:hover, input:focus + label {
-  background-color: rgba(255, 255, 255, .2);
-}
-
-input:checked + label {
-  order: 2;
-  animation: done .5s;
-}
-
-input:checked + label::before {
-  content: '\f058'; /* circle checkmark */
-}
-
-input[type="text"], textarea {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  padding: 5px;
-  border: none;
-  color: #593e4e;
-  background-color: #fff;
-  font-family: inherit;
-  font-size: inherit;
-  appearance: none;
-}
-
-input[type="text"]:focus, textarea:focus, button:focus {
-  outline: 2px solid #a0bacf;
 }
 
 
@@ -107,72 +45,15 @@ input[type="text"]:focus, textarea:focus, button:focus {
 
 
 .container-toggle {
-  margin-bottom: 15px;
-  /* transform: translate(-50%, -50%); */
-}
-
-input.toggle {
-  position: absolute;
-  left: -9999px;
-}
-
-label.toggle {
-  display: block;
-  position: relative;
-  /* margin: 20px; */
-  padding: 15px 30px 15px 62px;
-  border: 3px solid #fff;
-  border-radius: 100px;
-  color: #fff;
-  background-color: #a0bacf;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color .2s, box-shadow .2s;
 
 }
 
 label.toggle::after {
-  content: 'Hide Completed';
+
 }
 
-label.toggle::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 10px;
-  width: 32px;
-  border: 3px solid #fff;
-  border-radius: 100px;
-  transition: background-color .2s;
-  font-size: .95em;
-}
 
-label.toggle:hover, input:toggle.focus + label {
-  box-shadow: 0 0 20px rgba(0, 0, 0, .6);
-}
-input.toggle + label {
-  /* background-color: #2c3030; */
-  background-color: #435757;
-}
-input.toggle:checked + label {
-  background-color: #435757;
-}
-
-input.toggle:checked + label::before {
-  background-color: #fff;
-}
 
 input.toggle:checked + label.toggle::after {
-  content: 'Show Completed';
-}
 
-form.hide input:checked {
-
-}
-form.hide input:checked + label {
-  display:none;
 }
