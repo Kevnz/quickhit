@@ -2,7 +2,7 @@ var menubar = require("menubar");
 
 var mb = menubar({
   transparent: true,
-  dir: "build"
+  height: 500
 });
 
 mb.on("ready", function ready() {
@@ -10,4 +10,6 @@ mb.on("ready", function ready() {
   // your app code here
 });
 
-mb.on("after-create-window", () => {});
+mb.on("after-create-window", () => {
+  // mb.window.openDevTools();
+});

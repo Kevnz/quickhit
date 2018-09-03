@@ -7,14 +7,24 @@
 html {
   min-height: 100%;
 }
-
 body {
+  margin: 10px;
+  color: #435757;
+  font: 200 1.1em/1.1 'Roboto', sans-serif;
+  background:transparent;
+}
+body.styled {
   margin: 20px;
   color: #435757;
   background: linear-gradient(-20deg, #d0b782 20%, #a0bacf 80%);
   font: 200 1.1em/1.1 'Roboto', sans-serif;
 }
-
+#root {
+  border-radius: 5px;
+  border: 2px solid #435757;
+  max-height: 250px;
+  overflow: scroll;
+}
 .container {
   max-width: 450px;
   margin: 0 auto;
