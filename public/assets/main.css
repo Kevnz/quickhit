@@ -12,6 +12,8 @@ body {
   color: #435757;
   font: 200 1.1em/1.1 'Roboto', sans-serif;
   background:transparent;
+  height: 320px;
+  overflow: hidden;
 }
 body.styled {
   margin: 20px;
@@ -22,7 +24,7 @@ body.styled {
 #root {
   border-radius: 5px;
   border: 2px solid #435757;
-  max-height: 250px;
+  max-height: 300px;
   overflow: scroll;
 }
 .container {
