@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react'
 
-const QuickHitContext = React.createContext();
+const QuickHitContext = React.createContext()
 
-export default QuickHitContext;
+export default QuickHitContext

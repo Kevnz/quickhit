@@ -1,15 +1,14 @@
-import "./list.css";
-
-import React, { Component } from "react";
+import React, { Component } from 'react'
+import './list.css'
 
 class ListBase extends Component {
   render() {
-    const { items } = this.props;
+    const { items } = this.props
 
     const itemList = items.map((i, index) => {
       return (
         <div
-          className={`form-row ${i.isDone ? "completed" : ""}`}
+          className={`form-row ${i.isDone ? 'completed' : ''}`}
           key={`item-${i.id}`}
         >
           <input
@@ -18,24 +17,23 @@ class ListBase extends Component {
             id={`checkbox$item${i.id}`}
             name={`checkbox$item${i.id}`}
             onChange={e => {
-              i.isDone = !i.isDone;
-              this.props.updateItem(i);
+              i.isDone = !i.isDone
+              this.props.updateItem(i)
             }}
           />
           <label htmlFor={`checkbox$item${i.id}`}>{i.text}</label>
         </div>
-      );
-    });
-    console.log("this", this.props);
+      )
+    })
     return (
       <div className="items">
-        <form className={this.props.showCompleted ? "show" : "hide"}>
+        <form className={this.props.showCompleted ? 'show' : 'hide'}>
           {itemList}
           {this.props.children}
         </form>
       </div>
-    );
+    )
   }
 }
 
-export default ListBase;
+export default ListBase

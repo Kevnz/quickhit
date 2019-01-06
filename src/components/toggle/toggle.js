@@ -1,19 +1,16 @@
-import "./toggle.css";
-
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react'
+import './toggle.css'
 
 class ToggleBase extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this)
   }
   handleInputChange(event) {
-    event.preventDefault();
-    console.log("current ", this.props.showCompleted);
-    const newVal = !this.props.showCompleted;
-    console.log("chage val to ", newVal);
-    this.props.toggleItems(newVal);
+    event.preventDefault()
+    const newVal = !this.props.showCompleted
+    this.props.toggleItems(newVal)
   }
 
   render() {
@@ -25,15 +22,15 @@ class ToggleBase extends Component {
       <Fragment>
         <i className="fa fa-eye-slash" /> Show Completed
       </Fragment>
-    );
+    )
     return (
       <div className="container-toggle">
         <a href="/toggle" className="toggle" onClick={this.handleInputChange}>
           {message}
         </a>
       </div>
-    );
+    )
   }
 }
 
-export default ToggleBase;
+export default ToggleBase

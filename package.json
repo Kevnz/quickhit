@@ -8,7 +8,8 @@
     "pack": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=Icon.icns --prune=false --out=release-builds",
     "web:start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "lint": "eslint ./src"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,6 @@
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
-    "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
     "babel-preset-react-app": "^3.1.2",
@@ -26,7 +26,6 @@
     "css-loader": "0.28.7",
     "dotenv": "4.0.0",
     "dotenv-expand": "4.2.0",
-    "eslint": "4.10.0",
     "eslint-config-react-app": "^2.1.0",
     "eslint-loader": "1.9.0",
     "eslint-plugin-flowtype": "2.39.1",
@@ -52,13 +51,16 @@
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
-    "webpack-dev-server": "2.11.3",
+    "webpack-dev-server": "^3.1.14",
     "webpack-manifest-plugin": "1.3.2",
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {
+    "@kev_nz/eslint-config": "^2.0.0",
+    "babel-eslint": "^9.0.0",
     "electron-packager": "^12.1.0",
     "electron-prebuilt": "^1.4.13",
+    "eslint": "^5.8.0",
     "static-cling": "^1.0.1"
   },
   "jest": {
@@ -99,8 +101,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }
